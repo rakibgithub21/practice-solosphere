@@ -2,7 +2,8 @@ import { useContext } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../provider/AuthProvider"
 import toast from "react-hot-toast"
-
+import bgImg from '../../assest/images/register.jpg'
+import logo from '../../assest/images/logo.png'
 const Registration = () => {
     const { createUser,user,setUser, updateUserProfile, signInWithGoogle } = useContext(AuthContext)
     const navigate = useNavigate()
@@ -27,7 +28,7 @@ const Registration = () => {
                     <div className='flex justify-center mx-auto'>
                         <img
                             className='w-auto h-7 sm:h-8'
-                            src='https://merakiui.com/images/logo.svg'
+                            src={logo}
                             alt=''
                         />
                     </div>
@@ -163,7 +164,7 @@ const Registration = () => {
                 <div
                     className='hidden bg-cover bg-center lg:block lg:w-1/2'
                     style={{
-                        backgroundImage: `url('https://images.unsplash.com/photo-1606660265514-358ebbadc80d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1575&q=80')`,
+                        backgroundImage: `url(${bgImg})`,
                     }}
                 ></div>
             </div>
