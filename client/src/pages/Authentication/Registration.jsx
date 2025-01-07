@@ -36,14 +36,12 @@ const Registration = () => {
 
         try {
             const result = await createUser(email, pass)
-            console.log(result);
             await updateUserProfile(name, photo)
             setUser({...user,photoURL:photo,displayName:name})
             navigate('/')
             toast.success('success fully logged in')
 
         } catch (error) {
-            console.log(error);
             toast.error(error?.message)
         }
     }
